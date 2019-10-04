@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="Compulsory 1- Styling.css">
+    <meta charset="utf-8">
+    <script src="javaScript.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+    $(document).ready(function(){
+        $(".btn").click(function(){
+            alert("You have added one item to the shopping cart.\nYour current total is: R" + total+"\nVAT included")
+        })
+    });
+    </script>
+    <!-- Catalogue title -->
+    <title>The Store Stuff - Catalogue</title>
+    
+</head>
+
+<body>
+    <!-- Heading -->
+    <h1> The Store Stuff. </h1>
+    <br><br>
+    <!-- Navigation Bar -->
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="Catalogue.html">Our Catalogue</a></li>
+        <li><a href="shipping.html">Shipping Details</a></li>
+        <li><a href="meetus.html">Meet The Team</a></li>
+    </ul>
+    <br>
+    <a href="cart.html"><button id="cart" onclick="save_to()">Cart  <i class="fa fa-shopping-cart" style="font-size:24px"></i></button></a>
+    <br>
+    <!-- Section divider -->
+    <div style="background-color: lavender">
+        <!-- On sale heading -->
+        <h2 id="sale" align="center" >
+            ON SALE NOW
+        </h2>
+        <br><br>
+        <!-- Catalogue in the form of a table -->
+        <table id="catalogue">
+            <thead>
+                <tr>
+                    <!-- Headings for the table -->
+                    <!-- Each heading is a section -->
+                    <th id="tabled">Menswear</th>
+                    <th id="tabled">Womenswear</th>
+                    <th id="tabled">Skating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <!-- Each table data tag represents the item on sale as well as that item's details -->
+                        <p>The Lacerations</p>
+                        <!-- The image of the item -->
+                        <div class="onClickTextOverImage" style="background-image: url(Images/menswear_shirt.jpg);">
+                            <a href="#Mens"></a>
+                            <div id="Mens">
+                                <!-- A brief description once clicked on the image -->
+                                The Lacerations is a vibey long sleeve plaid woven. Featuring chest pocket with button closure, Vissla embroidered logo and woven label trims, the Lacerations found its name at a tidal surf peak off Nusa Lembongan, Bali. Brushed for soft handfeel. Sand Wash.
+                                Made from 100% COTTON
+                            </div>
+                        </div>
+                        <!-- A price tag -->
+                        <h5>R350.00</h5>
+                        <!-- The purchase putton -->
+                        <button id="purchased1" type="button" class="btn btn-success" onclick="add_item1()">Add to cart</button>
+                    </td>
+                    <td>
+                        <p>Rodas Sweater Stripe</p>
+                        <div class="onClickTextOverImage" style="background-image: url(Images/womenswear_top_2.jpg);">
+                            <a href="#Womens"></a>
+                            <div id="Womens">
+                                The Rodas Sweater has a solid and striped fabric with sleeve details, a rib neckline and cuffs. Pair this sweet thing with your favorite denim skirt.
+                            </div>
+                        </div>
+                        <h5>R370.00</h5>
+                        <button id="purchased2" type="button" class="btn btn-success" onclick="add_item2()">Add to cart</button>
+                    </td>
+                    <td>
+                        <p>Sunset Getaway Complete</p>
+                        <div class="onClickTextOverImage" style="background-image: url(Images/skateboard-1.jpg);">
+                            <a href="#Skating"></a>
+                            <div id="Skating">
+                                This incredibly fun board is the ultimate carving cruiser and the Sidewinder II trucks will allow you to jam turns into every tight pocket and critical section you encounter.
+                            </div>
+                        </div>
+                        <h5>R2,700.00</h5>
+                        <button id="purchased3" type="button" class="btn btn-success" onclick="add_item3()">Add to cart</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Glass Shop LS Knit Tee Black Heather</p>
+                        <div class="onClickTextOverImage" style="background-image: url(Images/menswear_top.jpg);">
+                            <a href="#Mens2"></a>
+                            <div id="Mens2">
+                                The Glass Shop L|S is a hip washed heather 30 singles long sleeve tee with pocket and sleeve screen print. Featuring heathered neck rib and side seam woven label, the Glass Shop L|S is made for Springtime dawn patrol layering. Garment Soft Wash
+                            </div>
+                        </div>
+                        <h5>R400.00</h5>
+                        <button id="purchased4" type="button" class="btn btn-success" onclick="add_item4()">Add to cart</button>
+                    </td>
+                    <td>
+                        <p>Rodas Sweater Stone</p>
+                        <div class="onClickTextOverImage" style="background-image: url(Images/womenswear_top_1.jpg);">
+                            <a href="#Womens2"></a>
+                            <div id="Womens2">
+                                The Rodas Sweater has a solid and striped fabric with sleeve details, a rib neckline and cuffs. Pair this sweet thing with your favorite denim skirt.
+                            </div>
+                        </div>
+                        <h5>R420.00</h5>
+                        <button id="purchased5" type="button" class="btn btn-success" onclick="add_item5()">Add to cart</button>
+                    </td>
+                    <td>
+                        <p>Eclipse Bonsai Complete</p>
+                        <div class="onClickTextOverImage" style="background-image: url(Images/longboard-1.png);">
+                            <a href="#Skating2"></a>
+                            <div id="Skating2">
+                                At 42” in length, the Bonsai is the second longest board in the entire Sector 9 lineup, this season, after the 25 Year OG Pin.
+                            </div>
+                        </div>
+                        <h5>R3,700.00</h5>
+                        <button id="purchased6" type="button" class="btn btn-success" onclick="add_item6()">Add to cart</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>   
+</body>
+
+</html>
